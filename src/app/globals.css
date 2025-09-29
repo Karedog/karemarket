@@ -1,9 +1,13 @@
 :root {
-  --background: #002349;
+  --background: #101827;
   --foreground: #ffffff;
-  --texto-verde: #67BF4E;
-  --texto-azul: #0C7CA2;
-  --texto-verde-escuro: #21A680;
+  --cor-dourado: #F59E0B;
+  --cor-azul-grafite: #111827;
+  --cor-cinza-azuldo: #9CA3AF;
+  --cor-azul-medio: #3B82F6;
+  --cor-verde:#38B000;
+  --cor-azul:#1E3A8A;
+
 }
 
 

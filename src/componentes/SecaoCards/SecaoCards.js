@@ -12,18 +12,27 @@ export default function SecaoCards(props){
   
     useEffect(()=>{
         carregarDados(props.dados)
-        console.log(props.dados)
+        
     },[props.dados])
 
     return (
         <section className={estilo.secao_cards}>
-                {dados?.map( (item, index)=>{
+            <div>
+                <input type="text" maxLength={15} placeholder="Pesquise aqui!!"/>
+            </div>
+            <div>
+                {dados?.map( (item)=>{
+                    console.log(item)
                     return <CardCripto 
-                                key ={index}
-                                nome={item.name}
+                                key ={item.id}
                                 simbolo={item.symbol}
+                                nome={item.name}
+                                quote={item.quote.USD.price}
+                                max_supply={item.max_supply}
+                                total_supply={item.total_supply}
                             />
                 })}
+            </div>
         </section>
     );
 }

@@ -30,7 +30,7 @@ export default function Home() {
     <>
       <Header/>
       <main className={styles.main}>
-        <SecaoInformacoes/>
+        <SecaoInformacoes />
         <SecaoCards dados={dados}/>
       </main>
     </>
