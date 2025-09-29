@@ -2,12 +2,15 @@ import estilo from "./CardCripto.module.css"
 
 export default function CardCripto(props){
     return (
-        <div onClick={()=> {}} >
-            <h3>{props.simbolo +' - '+ props.nome}</h3>
-            <div>
+        <div className={estilo.caixa_card} onClick={()=> {}} >
+            <div className={estilo.caixa_titulo}>
+            <h2 className={estilo.card_simbolo}>{props.simbolo}</h2>
+            <h3 className={estilo.nome_cripto}>{props.nome}</h3>
+            </div>
+            <div className={estilo.caixa_info}>
                 <div className={estilo.card_info}>
                     <p>Preço</p>
-                    <p>{props.quote}</p>
+                    <p>{props.preco.toFixed(2)}</p>
                 </div>
                 <div className={estilo.card_info}>
                     <p>Max Supply</p>
@@ -15,7 +18,7 @@ export default function CardCripto(props){
                 </div>
                 <div className={estilo.card_info}>
                     <p>Total Supply</p>
-                    <p>{props.total_supply}</p>
+                    <p>{props.total_supply.toFixed(2)}</p>
                 </div>
             </div>
         </div>

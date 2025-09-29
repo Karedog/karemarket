@@ -27,7 +27,7 @@ export default function SecaoCards(props){
                                 key ={item.id}
                                 simbolo={item.symbol}
                                 nome={item.name}
-                                quote={item.quote.USD.price}
+                                preco={item.quote.USD.price}
                                 max_supply={item.max_supply}
                                 total_supply={item.total_supply}
                             />

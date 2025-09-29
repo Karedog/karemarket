@@ -1,0 +1,35 @@
+.caixa_card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(41, 41, 41);
+    width: 230px;
+}
+.nome_cripto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    text-align: center;
+    font-size: 2em;
+}
+.card_simbolo{
+    padding: 5px;
+    font-size: 13px;
+}
+.caixa_info{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    padding: 5px;
+    justify-content: space-evenly;
+    gap: 2px;
+    background: linear-gradient(180deg, #FFD369 0%, #E6A400 100%);
+    color: var(--cor-azul-grafite);
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+}
+.card_info{
+    max-width: 33%;
+    text-align: center;
+}
