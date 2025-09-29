@@ -8,13 +8,10 @@ export default function Header(){
             <menubar>
                 <ol className={estilo.menu}>
                     <li className={estilo.menu_opcao}>
-                        <a href="#" className={estilo.menu_link}>opção 1</a>
+                        <a href="#" className={estilo.menu_link}>KareMarket</a>
                     </li>
                     <li className={estilo.menu_opcao}>
-                        <a href="#" className={estilo.menu_link}>opção 2</a>
-                    </li>
-                    <li className={estilo.menu_opcao}>
-                        <a href="#" className={estilo.menu_link}>opção 3</a>
+                        <a href="#" className={estilo.menu_link}>Sobre mim</a>
                     </li>
                 </ol>
             </menubar>

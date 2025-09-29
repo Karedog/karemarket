@@ -3,38 +3,36 @@
 import styles from "./page.module.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import CardCripto from "@/componentes/CardCripto/CardCripto";
 import Header from "@/componentes/Header/Header";
+import SecaoInformacoes from "@/componentes/SecaoInformacoes/SecaoInformacoes";
+import SecaoCards from "@/componentes/SecaoCards/SecaoCards";
 
 export default function Home() {
   const [dados, setDados] = useState([]);
 
   async function retornaListaCripto() {
     try {
-      const resposta = await axios.get("http://localhost:3000/api/listar-criptos"); // agora chama sua API Next
-      return resposta.data;
+      const resposta = await axios.get("http://localhost:3000/api/listar-criptos");
+      return resposta.data.data;
     } catch (erro) {
       console.log(erro);
       return [];
     }
   }
 
-  useEffect(() => {
-    retornaListaCripto().then(res =>{
-      setDados(res.data)
+  useEffect( () => {
+    retornaListaCripto().then(res => {
+    setDados(res);
     });
   }, []);
 
   return (
-    <main className={styles.main}>
+    <>
       <Header/>
-      <ul>
-        {dados?.map((item) => (       
-          <li key={item.id}>
-            <CardCripto nome={item.name}simbolo={item.symbol}/>
-          </li>
-        ))}
-      </ul>
-    </main>
+      <main className={styles.main}>
+        <SecaoInformacoes/>
+        <SecaoCards dados={dados}/>
+      </main>
+    </>
   );
 }

@@ -5,11 +5,7 @@ export default function CardCripto(props){
         <div onClick={()=> {}} >
             <h3>{props.simbolo +' - '+ props.nome}</h3>
             <div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>teste 1</p>
             </div>
         </div>
     );
