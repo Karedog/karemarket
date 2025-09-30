@@ -1,0 +1,11 @@
+
+
+
+.caixa_cards{
+    width: 50vw;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px;
+}

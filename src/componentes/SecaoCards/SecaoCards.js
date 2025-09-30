@@ -20,7 +20,7 @@ export default function SecaoCards(props){
             <div>
                 <input type="text" maxLength={15} placeholder="Pesquise aqui!!"/>
             </div>
-            <div>
+            <div className={estilo.caixa_cards}>
                 {dados?.map( (item)=>{
                     console.log(item)
                     return <CardCripto 
