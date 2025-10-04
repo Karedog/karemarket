@@ -3,6 +3,7 @@
     flex-direction: column;
     border-radius: 15px;
     box-shadow: 0 0 5px rgb(41, 41, 41);
+    background-color: var(--cor-azul-grafite);
     width: 230px;
 }
 .nome_cripto{

@@ -1,0 +1,38 @@
+.secao_informacoes{
+    width: 50%;
+    min-width: 300px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+.caixa_titulo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 15%;
+    background-color: rgb(62, 65, 68);
+}
+.caixa_infos{
+    background-color: var(--cor-azul-grafite);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 85%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.caixa_info_valores{
+    background-color: var(--cor-azul-grafite);
+    background-color: aquamarine;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 5pxpx;
+    justify-content: space-evenly;
+    align-items: center;
+}

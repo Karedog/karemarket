@@ -4,5 +4,7 @@
     background-color: var(--background);
     justify-content: space-evenly;
     padding: 15px;
+    gap: 15px;
     color: #9CA3AF;
+    height: 92vh;
 }

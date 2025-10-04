@@ -5,7 +5,7 @@ export default function CardCripto(props){
         <div className={estilo.caixa_card} onClick={()=> {}} >
             <div className={estilo.caixa_titulo}>
             <h2 className={estilo.card_simbolo}>{props.simbolo}</h2>
-            <h3 className={estilo.nome_cripto}>{props.nome}</h3>
+            <h3 className={estilo.nome_cripto}>{props.nome.slice(0,11)}</h3>
             </div>
             <div className={estilo.caixa_info}>
                 <div className={estilo.card_info}>

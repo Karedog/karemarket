@@ -17,7 +17,7 @@ export default function SecaoCards(props){
 
     return (
         <section className={estilo.secao_cards}>
-            <div>
+            <div className={estilo.caixa_pesquisa}>
                 <input type="text" maxLength={15} placeholder="Pesquise aqui!!"/>
             </div>
             <div className={estilo.caixa_cards}>
