@@ -1,8 +1,13 @@
 import estilo from "./CardCripto.module.css"
 
 export default function CardCripto(props){
+
+    function selecionarCripto(){
+        props.setCriptoSelecionado(props.id) 
+    }
+
     return (
-        <div className={estilo.caixa_card} onClick={()=> {}} >
+        <div className={estilo.caixa_card} onClick={selecionarCripto} key={props.id} >
             <div className={estilo.caixa_titulo}>
             <h2 className={estilo.card_simbolo}>{props.simbolo}</h2>
             <h3 className={estilo.nome_cripto}>{props.nome.slice(0,11)}</h3>

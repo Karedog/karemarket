@@ -8,21 +8,27 @@ import SecaoInformacoes from "@/componentes/SecaoInformacoes/SecaoInformacoes";
 import SecaoCards from "@/componentes/SecaoCards/SecaoCards";
 
 export default function Home() {
+  console.log('---------------------------------------')
+  console.log('renderizando pagina principal')
   const [dados, setDados] = useState([]);
-
+  const [criptoSelecionada, setCriptoSelecionada] = useState(1)
+  
   async function retornaListaCripto() {
+    console.log('carregando lista')
     try {
       const resposta = await axios.get("http://localhost:3000/api/listar-criptos");
-      return resposta.data.data;
+      console.log(resposta.data)
+      return resposta.data;
     } catch (erro) {
       console.log(erro);
       return [];
     }
   }
+  
 
   useEffect( () => {
     retornaListaCripto().then(res => {
-    setDados(res);
+      setDados(res);
     });
   }, []);
 
@@ -30,8 +36,9 @@ export default function Home() {
     <>
       <Header/>
       <main className={styles.main}>
-        <SecaoInformacoes />
-        <SecaoCards dados={dados}/>
+        <SecaoInformacoes criptos={dados}  criptoSelecionada={criptoSelecionada}/>
+        
+        <SecaoCards dados={dados} setCriptoSelecionado={setCriptoSelecionada}/>
       </main>
     </>
   );
