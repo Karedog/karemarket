@@ -7,8 +7,16 @@ import Image from "next/image";
 export default function SecaoInformacoes(props){
     console.log('renderizando seção informações')
     const [cripto, setCripto] = useState(null)
+    const [valorConversor, setValorConversor] = useState()
+
+
+    function converterValor(e){
+        const valor = e.target.value * cripto.quote.USD.price
+        setValorConversor(valor)
+    }
     
     useEffect(()=>{
+        setValorConversor(0)
         if (!props.criptos.Quote || !props.criptos.Meta) return;
 
         const criptoQuote = props.criptos.Quote?.find( cripto => {
@@ -27,13 +35,13 @@ export default function SecaoInformacoes(props){
      
     if(cripto)
     {   
+        console.log(cripto)
         return( <section className={estilo.secao_informacoes}>
             <div className={estilo.caixa_titulo}>
-
-                <img className={estilo.imagem_logo}/>
-                <div className={estilo.caixa_nome}>
-                    <h2>{cripto.name}</h2>
                     <img src={cripto.logo}/>
+                <div className={estilo.caixa_nome}>
+                    <h2 className={estilo.titulo_nome}>{cripto.name}</h2>
+                    <h3 className={estilo.titulo_symbol}>{cripto.symbol}</h3>
                 </div>
             </div>
 
@@ -45,17 +53,16 @@ export default function SecaoInformacoes(props){
                 </div>
 
                 <div className={estilo.caixa_info_descricao}>
-                    <div className={estilo.caixa_info2_conversor}>
-                        <h4>conversor</h4>
+                    <div className={estilo.caixa_info_descricao_conversor}>
+                        <h3>Conversor</h3>
                         <p>{cripto.name}</p>
-                        <input type="number" maxLength={32}></input>
+                        <input type="number" maxLength={32} onChange={converterValor}></input>
                         <p>Dolar</p>
-                        <input></input>
-                    <p>Conversor</p>
+                        <p className={estilo.valor_convertido}>{valorConversor.toFixed(2)}</p>
                     </div>
-                    <div className={estilo.caixa_info2_descrição}>
-                        <p>{cripto.category}</p>
-                        <p>{cripto.description}</p>
+                    <div className={estilo.caixa_info_descricao_sobre}>
+                        <h3>Descrição</h3>
+                        <p className={estilo.caixa_info_descricao_sobre_texto}>{cripto.description}</p>
                     </div>
                 </div>
             </div>

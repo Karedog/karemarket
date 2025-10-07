@@ -1,11 +1,9 @@
 .secao_informacoes{
     width: 50%;
     min-width: 300px;
-    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px;
 }
 .caixa_titulo{
     width: 100%;
@@ -14,25 +12,80 @@
     justify-content: left;
     align-items: center;
     height: 15%;
-    background-color: rgb(62, 65, 68);
+    gap:  15px;
+    padding: 5px;
+}
+.titulo_nome{
+    font-size: 30px;
+}
+.titulo_symbol{
+    font-size: 18px;
 }
 .caixa_infos{
-    background-color: var(--cor-azul-grafite);
     width: 100%;
     display: flex;
     flex-direction: row;
+    gap: 30px;
     height: 85%;
     align-items: center;
     justify-content: space-evenly;
 }
 .caixa_info_valores{
     background-color: var(--cor-azul-grafite);
-    background-color: aquamarine;
     height: 100%;
-    width: 45%;
+    width: 30%;
+    min-width: 150px;
     display: flex;
     flex-direction: column;
-    gap: 5pxpx;
+    gap: 5px;
     justify-content: space-evenly;
     align-items: center;
+}
+.caixa_info_descricao{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.caixa_info_descricao_sobre, .caixa_info_descricao_conversor{
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+    color: var(--cor-cinza-azuldo);
+    font-size: 15px;
+    font-family: sans-serif;
+    line-height: 1.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.caixa_info_descricao_sobre{
+    background-color: var(--cor-azul-grafite);
+    padding: 15px;
+    min-height: 240px;
+    max-height: 240px;
+    overflow: hidden;
+    color: var(--cor-cinza-azuldo);
+    font-size: 15px;
+    font-family: sans-serif;
+    line-height: 1.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.caixa_info_descricao_sobre_texto{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
+    display: box;
+    box-orient: vertical;
+
+    -webkit-line-clamp: 9;
+    line-clamp: 9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* O white-space: nowrap não é estritamente necessário para multi-linha com -webkit-line-clamp, mas pode ser usado em casos de 1 linha */
+    /* white-space: nowrap; */
 }
