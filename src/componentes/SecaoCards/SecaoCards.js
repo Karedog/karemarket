@@ -29,7 +29,7 @@ export default function SecaoCards(props){
     return (
         <section className={estilo.secao_cards}>
             <div className={estilo.caixa_pesquisa}>
-                <input className={estilo.campoDeBusca} type="text" maxLength={15} placeholder="Pesquise aqui!!" onChange={atualizarFiltro}/>
+                <input className={estilo.campo_de_busca} type="text" maxLength={15} placeholder="Pesquise aqui!!" onChange={atualizarFiltro}/>
             </div>
             <div className={estilo.caixa_cards}>
                 {dados?.map( (item)=>{
