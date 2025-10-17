@@ -1,10 +1,12 @@
 .caixa_card{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border-radius: 15px;
     box-shadow: 0 0 5px rgb(41, 41, 41);
     background-color: var(--cor-azul-grafite);
-    width: 230px;
+    width: 200px;
+    height: 200px;
 }
 .nome_cripto{
     display: flex;
@@ -13,10 +15,12 @@
     padding: 6px;
     text-align: center;
     font-size: 2em;
+    height: 100%;
 }
-.card_simbolo{
+.titulo_nome{
     padding: 5px;
-    font-size: 13px;
+    font-size: 18px;
+    color: rgb(236, 235, 235);
 }
 .caixa_info{
     display: flex;
@@ -24,13 +28,50 @@
     font-size: 12px;
     padding: 5px;
     justify-content: space-evenly;
+    align-items: center;
     gap: 2px;
-    background: linear-gradient(180deg, #FFD369 0%, #E6A400 100%);
+    background: linear-gradient(180deg, #ce940d 0%, #ac7e0c 90%);
     color: var(--cor-azul-grafite);
+    font-weight: bolder;
     border-radius: 0 0 12px 12px;
     overflow: hidden;
 }
-.card_info{
+.card_info_preco, .card_info_24h{
     max-width: 33%;
     text-align: center;
+}
+.card_info_24h{
+    font-size: 18px;
+}
+.caixa_titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    height: 100%;
+}
+.caixa_titulo_texto{
+    background-color: var(--cor-azul-grafite-escuro);
+    border-radius: 15px 15px 0 0;
+    padding: 5px;
+    color: white;
+    width: 100%;
+    
+}
+.caixa_titulo_imagem{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.titulo_imagem{
+    height: 100%;
+}
+.texto_azul{
+    color: rgb(33, 61, 189);
+}
+.texto_vermelho{
+    color: rgb(175, 46, 46);
 }

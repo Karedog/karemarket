@@ -47,9 +47,45 @@ export default function SecaoInformacoes(props){
 
             <div className={estilo.caixa_infos}>
                 <div className={estilo.caixa_info_valores}>
-                    <h4>Variação</h4>
-                    <h3 className={estilo.texto_preco}>{cripto?.name}</h3>
-
+                    <h3>Variação</h3>
+                    
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1h :</td>  
+                                <td>{cripto.quote.USD.percent_change_1h.toFixed(2)}%</td>  
+                            </tr>
+                            <tr>
+                                <td>24h :</td>  
+                                <td>{cripto.quote.USD.percent_change_24h.toFixed(2)}%</td>  
+                            </tr>
+                            <tr>
+                                <td>7d :</td>  
+                                <td>{cripto.quote.USD.percent_change_7d.toFixed(2)}%</td>  
+                            </tr>
+                            <tr>
+                                <td>90d :</td>  
+                                <td>{cripto.quote.USD.percent_change_90d.toFixed(2)}%</td>  
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Informações</h3>
+                    <div>
+                        <p>Data de lançamento</p>  
+                        <p>{
+                        cripto.date_launched? cripto.date_launched.slice(0,10):"-"
+                        }</p>  
+                    </div>
+                    <div>
+                        <p>Max supply</p>  
+                        <p>{cripto.max_supply? cripto.max_supply:"-"}</p>  
+                    </div>
+                    <div>
+                        <p>Data de lançamento</p>  
+                    </div>
+                    <div>
+                        <p>Data de lançamento</p>  
+                    </div>
                 </div>
 
                 <div className={estilo.caixa_info_descricao}>

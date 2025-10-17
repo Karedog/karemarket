@@ -15,12 +15,13 @@ export default function SecaoCards(props){
     function carregarDados(dados){
         console.log('antes de carregar os dados')
         const novosDados = dados?.Quote?.filter((cripto)=>{
-                return cripto.name.toLowerCase().includes(filtro.toLowerCase())})
-        setDados(novosDados?.slice(0,20))
+            return cripto.name.toLowerCase().includes(filtro.toLowerCase())})
+            setDados(novosDados?.slice(0,20))
     }
     
     useEffect(()=>{
         carregarDados(props.dados)
+        
         },[filtro,props.dados,]
     )
 
@@ -35,12 +36,12 @@ export default function SecaoCards(props){
                     return <CardCripto 
                                 key ={item.id}
                                 id ={item.id}
+                                image = {props.dados.Meta[item.id].logo}
                                 setCriptoSelecionado={props.setCriptoSelecionado}
                                 simbolo={item.symbol}
                                 nome={item.name}
                                 preco={item.quote.USD.price}
-                                max_supply={item.max_supply}
-                                total_supply={item.total_supply}
+                                volume24h={item.quote.USD.volume_change_24h}
                             />
                 })}
             </div>
