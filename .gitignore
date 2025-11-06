@@ -42,3 +42,5 @@ next-env.d.ts
 
 #recursos de produção
 /imagens
+
+.vercel
